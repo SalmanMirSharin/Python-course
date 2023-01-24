@@ -1,0 +1,80 @@
+# from PyQt5.QtWidgets import QLabel
+# from PyQt5.QtWidgets import QApplication
+# import sys
+
+
+# label = QLabel('Theis is a label')
+# print(label)
+
+
+# App = QApplication(sys.argv)
+
+# sys.exit(App.exec())
+
+# a = f"""
+# I am sure that the shells are seashore shells. 
+# {'  '}So if she sells seashells on the seashore,
+# {'   '}The shells that she sells are seashells,
+# I am sure She sells seashells on the seashore;
+# """
+# print(a)
+
+
+# a = ['I am sure that the shells are seashore shells.','So if she sells seashells on the seashore,','The shells that she sells are seashells,','I am sure She sells seashells on the seashore']
+
+
+# b = 'This is a python languag'
+
+# c = b.center(50,1)
+# print(c)
+
+
+
+# print('center'.center(width))
+# print(a.center(width))
+
+# c =a.split(', ')
+# d =a.split(', ')
+
+# b = b.center(width)
+# print(b)
+
+# for i in a:
+#     # print(i.center(width))
+#     print(i.center(width))
+
+# a = a.center(width)
+# print(a)
+
+# w = ['this is a car','this is a bus','this is a airoplane',]
+
+
+
+# e = w.split('. ')
+# print(w)
+# for i in a:
+#     print(i.center(width))
+
+
+
+import shutil
+width,_ = shutil.get_terminal_size()
+
+a = 'I am sure that the shells are seashore shells. So if she sells seashells on the seashore, The shells that she sells are seashells, I am sure She sells seashells on the seashore;'
+
+st =''
+for i in a:
+    if i==',':
+        i +='-'
+    elif i=='.':
+        i+='-'
+    st+=i
+
+a = st.split('-')
+
+for sentence in a:
+    print(sentence.center(width))
+   
+ 
+
+

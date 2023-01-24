@@ -135,20 +135,20 @@ rider4 = Rider('rider4','rider4@gmail.com','rider4', random.randint(0,30),5000)
 # rider3 = Rider('rider3','rider3@gmail.com','rider3', random.randint(0,30),5000)
 # rider4 = Rider('rider4','rider4@gmail.com','rider4', random.randint(0,30),5000)
 
-
+vehicle_types = ['car','bike','cng']
 
 for i in range(1,100):
     driver1 = Driver(f'driver{i}',f'driver{i}@gmail.com',f'driver{i}',random.randint(0,100),random.randint(1000,9999))
     driver1.take_driving_test()
-    driver1.register_a_vehicle('car',random.randint(10000,99999),10)
+    driver1.register_a_vehicle(random.choice(vehicle_types),random.randint(10000,99999),10)
 
 
 print(uber.get_available_car())
 
-uber.find_a_vehicle(rider1,'car',random.randint(1,100))
-uber.find_a_vehicle(rider2,'car',random.randint(1,100))
-uber.find_a_vehicle(rider3,'car',random.randint(1,100))
-uber.find_a_vehicle(rider4,'car',random.randint(1,100))
+uber.find_a_vehicle(rider1,random.choice(vehicle_types),random.randint(1,100))
+uber.find_a_vehicle(rider2,random.choice(vehicle_types),random.randint(1,100))
+uber.find_a_vehicle(rider3,random.choice(vehicle_types),random.randint(1,100))
+uber.find_a_vehicle(rider4,random.choice(vehicle_types),random.randint(1,100))
 
 print(rider1.get_trip_history())
 print(uber.total_income())

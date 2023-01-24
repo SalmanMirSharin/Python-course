@@ -49,9 +49,14 @@ class Bike(Vehicle):
     def __init__(self, vehicle_type, license_plate, rate, driver,) -> None:
         super().__init__(vehicle_type, license_plate, rate, driver)
 
-    def start_driving(self):
+    def start_driving(self,start,destination):
         self.status = 'unavailable'
         print(self.vehicle_type,self.license_plate,'started')
+        distance = abs(start - destination)
+        for i in range(0,distance):
+            sleep(0.5)
+            print(f'Driving: {self.license_plate} Current position: {i} of {destination}\n')
+        self.trip_finished() 
     
     def trip_finished(self):
         self.status = 'available'
@@ -62,9 +67,14 @@ class Cng(Vehicle):
     def __init__(self, vehicle_type, license_plate, rate, driver,) -> None:
         super().__init__(vehicle_type, license_plate, rate, driver)
 
-    def start_driving(self):
+    def start_driving(self,start,destination):
         self.status = 'unavailable'
         print(self.vehicle_type,self.license_plate,'started')
+        distance = abs(start - destination)
+        for i in range(0,distance):
+            sleep(0.5)
+            print(f'Driving: {self.license_plate} Current position: {i} of {destination}\n')
+        self.trip_finished() 
     
     def trip_finished(self):
         self.status = 'available'
